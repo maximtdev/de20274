@@ -1,0 +1,71 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Calibri, sans-serif;
+}
+/*
+Основной фон - #FFFFFF
+Дополнительный фон - #D2F6E7
+Акцентирование внимания - #70B2AF
+Товары, доступное для заказа количество которых
+(суммарно по всем размерам модели) меньше или равно трем - #FF8080
+
+*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+}
+header .logo {
+    display: flex;
+}
+header .logo img {
+    height: 100px;
+}
+header div {
+    line-height: 100px;
+}
+header nav ul {
+    list-style-type: none;
+    display: flex;
+}
+header nav ul li a {
+    display: inline-block;
+    padding: 10px;
+    line-height: 80px;
+    color: #70B2AF;
+    text-decoration: none;
+    font-size: 1.25em;
+}
+
+.card {
+    height: 150px;
+    border: 1px solid black;
+    margin: 10px;
+    display: flex;
+}
+.card .image {
+    width: 150px;
+}
+.card .info {
+    padding: 5px;
+    width: 100%;
+}
+.card .info .production {
+    font-size: 1.2em;
+    text-align: center;
+}
+.card .price{
+    width: 150px;
+    font-size: 1.3em;
+    font-weight: bold;
+    padding-top: 15px;
+}
+
+.small {
+    background-color: #FF8080;
+}
+.sell {
+    color: #70B2AF;
+}
