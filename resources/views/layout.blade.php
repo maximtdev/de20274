@@ -20,10 +20,22 @@
         <ul>
             <li><a href="{{ route('index') }}">Главная</a></li>
             <li><a href="{{ route('product.index') }}">Товары</a></li>
+            <li><a style="cursor: pointer;" onclick="history.back()">Назад</a></li>
         </ul>
     </nav>
-    <div class="auth">
 
+    <div class="auth">
+       @auth
+            {{ Auth::user()->surname }} {{ Auth::user()->name }} {{ Auth::user()->patronymic }}
+            <form method="POST" action="/logout" style="display: inline-block" >
+                @csrf
+                <button type="submit">Выйти</button>
+            </form>
+        @else
+           <form method="POST" action="/login" >
+               <button type="submit">Войти</button>
+           </form>
+       @endauth
     </div>
 </header>
 

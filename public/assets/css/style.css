@@ -69,3 +69,6 @@ header nav ul li a {
 .sell {
     color: #70B2AF;
 }
+.btn-login {
+    text-decoration: none;
+}
